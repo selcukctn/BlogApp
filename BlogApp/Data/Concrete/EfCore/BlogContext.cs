@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.Data.Concrete.EfCore
 {
-    public class BlogContex:DbContext {
+    public class BlogContext:DbContext {
 
-        public BlogContex(DbContextOptions<BlogContex> options): base(options){
+        public BlogContext(DbContextOptions<BlogContext> options): base(options){
             
         }
 

@@ -3,16 +3,19 @@ using System;
 using BlogApp.Data.Concrete.EfCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace BlogApp.Migrations
 {
-    [DbContext(typeof(BlogContex))]
-    partial class BlogContexModelSnapshot : ModelSnapshot
+    [DbContext(typeof(BlogContext))]
+    [Migration("20241025111438_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.1");

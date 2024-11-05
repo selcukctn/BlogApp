@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BlogApp.Data.Concrete.EfCore{
     public static class SeedData{
         public static void TestVerileriniDoldur(IApplicationBuilder app){
-            var context = app.ApplicationServices.CreateScope().ServiceProvider.GetService<BlogContex>();
+            var context = app.ApplicationServices.CreateScope().ServiceProvider.GetService<BlogContext>();
             if(context != null){
                 if(context.Database.GetPendingMigrations().Any()){
                     context.Database.Migrate();
